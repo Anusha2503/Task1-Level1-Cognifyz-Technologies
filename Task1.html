@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Task1</title>
+    <style>
+        body {
+            background-image: url('CIT.png');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333; 
+        }
+        
+        header {
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        nav {
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); 
+            border-radius: 10px; 
+            margin: 20px auto; 
+            max-width: 800px; 
+            display: none;
+        }
+        
+        p {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333; 
+        }
+        
+        form {
+            text-align: center;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        
+        button {
+            padding: 15px 30px; 
+            background-color: blue;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px; 
+        }
+        
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .description-box {
+            color: green; 
+        }
+
+        .description-box h2 {
+            color: purple; 
+        }
+        
+        .description-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .description-box ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CIT COLLEGE</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#" onclick="showSection('branches')">Branches</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <p>Welcome to CIT College webpage</p>
+        <img src="CIT.png" alt="Placeholder Image">
+        <form>
+            <input type="text" placeholder="Enter your Name">
+            <input type="text" placeholder="Enter your email">
+            <button>Apply Now</button>
+        </form>
+    </section>
+    
+    <section id="about" class="description-box">
+        <h2 style="text-align: center">About CIT College</h2>
+        <ul>
+            <li>CIT College, located in Tumkur, Karnataka, is a renowned institution known for its commitment to excellence in education</li>
+            <li>Established with the vision of providing quality education and fostering holistic development.</li>
+            <li>Offers a diverse range of academic programs across various disciplines</li>
+            <li>Equipped with state-of-the-art facilities and infrastructure</li>
+            <li>Emphasizes extracurricular activities, sports, and community engagement</li>
+            <li>Committed to shaping future leaders who are socially responsible and globally aware</li>
+        </ul>
+    </section>
+    
+    <section id="contact" class="description-box">
+        <h2 style="text-align: center">Contact CIT College</h2>
+        <ul>
+            <li>Official Website: Visit the official website of CIT College, if available</li>
+            <li>Search Engines: Use search engines like Google to search for "CIT College Tumkur contact details" or similar keywords</li>
+            <li>Social Media: Check the official social media profiles of CIT College</li>
+            <li>Directories: Look for educational directories or listings that may have contact information for CIT College</li>
+            <li>Local Directories: Check local business directories or online platforms that list educational institutions in Tumkur</li>
+        </ul>
+    </section>
+    
+    <section id="branches" class="description-box">
+        <h2>CIT College Branches</h2>
+        <ul>
+            <li>Computer Science and Engineering</li>
+            <li>Artificial Intelligence and Data Science</li>
+            <li>Information Science</li>
+            <li>Electrical Engineering</li>
+            <li>Civil Engineering</li>
+            <li>Mechanical Engineering</li>
+        </ul>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
